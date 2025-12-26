@@ -1,295 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ruzal Majmudar | Software Developer</title>
-  <style>
-    :root{
-      --bg:#0b1220;
-      --card:#111a2e;
-      --text:#e8edf8;
-      --muted:#aab6d6;
-      --accent:#6aa7ff;
-      --chip:#172344;
-      --border:rgba(255,255,255,.08);
-      --shadow: 0 12px 30px rgba(0,0,0,.35);
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
-      background: radial-gradient(900px 500px at 15% 10%, rgba(106,167,255,.18), transparent 55%),
-                  radial-gradient(700px 420px at 85% 20%, rgba(154,119,255,.14), transparent 55%),
-                  var(--bg);
-      color:var(--text);
-      line-height:1.6;
-    }
-    a{color:inherit; text-decoration:none}
-    .container{max-width:1100px; margin:0 auto; padding:28px 18px 60px}
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 16px; border:1px solid var(--border); border-radius:14px;
-      background: rgba(17,26,46,.55); backdrop-filter: blur(10px);
-      position: sticky; top: 14px; z-index: 10;
-    }
-    .brand{display:flex; gap:10px; align-items:center; font-weight:700; letter-spacing:.2px}
-    .logo{
-      width:34px; height:34px; border-radius:10px;
-      background: linear-gradient(135deg, rgba(106,167,255,1), rgba(154,119,255,1));
-      box-shadow: 0 10px 22px rgba(106,167,255,.22);
-    }
-    .navlinks{display:flex; gap:14px; flex-wrap:wrap}
-    .navlinks a{
-      color:var(--muted); font-weight:600; font-size:14px;
-      padding:8px 10px; border-radius:10px;
-    }
-    .navlinks a:hover{color:var(--text); background: rgba(255,255,255,.05)}
-    .hero{
-      display:grid; grid-template-columns: 1.35fr .65fr;
-      gap:18px; margin-top:18px;
-    }
-    @media (max-width: 900px){ .hero{grid-template-columns:1fr} }
-    .card{
-      border:1px solid var(--border);
-      background: rgba(17,26,46,.62);
-      backdrop-filter: blur(10px);
-      border-radius:18px;
-      box-shadow: var(--shadow);
-      padding:18px;
-    }
-    .title{font-size:34px; margin:0 0 6px; line-height:1.15}
-    .subtitle{color:var(--muted); margin:0 0 14px; font-weight:600}
-    .badges{display:flex; flex-wrap:wrap; gap:10px; margin:12px 0 6px}
-    .chip{
-      padding:8px 10px; border-radius:999px;
-      background: rgba(23,35,68,.7);
-      border:1px solid var(--border);
-      color:var(--muted);
-      font-size:13px; font-weight:600;
-    }
-    .cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:8px;
-      padding:10px 12px; border-radius:12px;
-      font-weight:700; font-size:14px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.04);
-      color: var(--text);
-      cursor:pointer;
-    }
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(106,167,255,.95), rgba(154,119,255,.95));
-      border-color: transparent;
-    }
-    .btn:hover{transform: translateY(-1px)}
-    .grid{
-      margin-top:18px;
-      display:grid; grid-template-columns: 1fr 1fr;
-      gap:18px;
-    }
-    @media (max-width: 900px){ .grid{grid-template-columns:1fr} }
-    h2{
-      margin:0 0 10px;
-      font-size:18px;
-      letter-spacing:.2px;
-    }
-    .muted{color:var(--muted)}
-    .list{margin:0; padding-left:18px; color:var(--muted)}
-    .timeline{
-      display:flex; flex-direction:column; gap:12px;
-    }
-    .item{
-      border:1px solid var(--border);
-      background: rgba(23,35,68,.35);
-      border-radius:14px;
-      padding:12px 12px;
-    }
-    .item b{color:var(--text)}
-    .item small{color:var(--muted)}
-    .footer{
-      margin-top:22px;
-      color:var(--muted);
-      text-align:center;
-      font-size:13px;
-    }
-    .mini{
-      display:grid; gap:10px;
-    }
-    .kpi{
-      display:flex; justify-content:space-between; gap:10px;
-      padding:10px 12px;
-      border:1px solid var(--border);
-      border-radius:14px;
-      background: rgba(23,35,68,.35);
-    }
-    .kpi span{color:var(--muted); font-weight:600}
-    .kpi b{font-size:14px}
-  </style>
+    <meta charset="UTF-8">
+    <title>Swati Beauty Parlour</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover no-repeat;
+            color: white;
+            padding: 120px 0;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+        footer {
+            background-color: #222;
+            color: #ccc;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
 
-    <div class="nav">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div>Ruzal Majmudar</div>
-      </div>
-      <div class="navlinks">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-
-    <section class="hero">
-      <div class="card">
-        <h1 class="title">Ruzal Majmudar</h1>
-        <p class="subtitle">Software Developer • Building web apps & APIs with clean, reliable code</p>
-
-        <p class="muted" style="margin:0">
-          I design and develop scalable applications, craft REST APIs, and enjoy solving real-world problems with
-          practical engineering. I focus on performance, maintainability, and user experience.
-        </p>
-
-        <div class="badges">
-          <div class="chip">.NET / C#</div>
-          <div class="chip">Web APIs</div>
-          <div class="chip">SQL / MySQL</div>
-          <div class="chip">JavaScript</div>
-          <div class="chip">Bootstrap</div>
-        </div>
-
-        <div class="cta">
-          <a class="btn primary" href="#contact">📩 Hire / Contact</a>
-          <a class="btn" href="#projects">🧩 View Projects</a>
-          <button class="btn" onclick="window.print()">🖨️ Print</button>
-        </div>
-      </div>
-
-      <div class="card mini">
-        <h2>Highlights</h2>
-        <div class="kpi"><span>Role</span> <b>Software Developer</b></div>
-        <div class="kpi"><span>Focus</span> <b>Web Apps & APIs</b></div>
-        <div class="kpi"><span>Strengths</span> <b>Clean Code • Debugging</b></div>
-        <div class="kpi"><span>Availability</span> <b>Open to Opportunities</b></div>
-        <p class="muted" style="margin:0; font-size:13px;">
-          Tip: Replace the text above with your real details (location, years of experience, domain, etc.).
-        </p>
-      </div>
-    </section>
-
-    <section id="about" class="grid">
-      <div class="card">
-        <h2>About</h2>
-        <p class="muted" style="margin:0">
-          I’m a software developer experienced in building responsive web applications and backend services.
-          I enjoy working across the stack—turning requirements into working features, writing reusable components,
-          and integrating systems through APIs.
-        </p>
-      </div>
-
-      <div class="card" id="skills">
-        <h2>Skills</h2>
-        <ul class="list">
-          <li>C#, .NET / ASP.NET (MVC / Web API)</li>
-          <li>HTML, CSS, Bootstrap, JavaScript</li>
-          <li>Databases: SQL Server / MySQL (queries, stored procedures)</li>
-          <li>API integration, authentication, and debugging</li>
-          <li>Git, deployment basics, IIS (optional)</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="grid" id="projects">
-      <div class="card">
-        <h2>Projects</h2>
-        <div class="timeline">
-          <div class="item">
-            <b>Project 1: Web API Service</b><br/>
-            <small>Built REST endpoints, validated payloads, optimized DB calls, improved error handling.</small>
-          </div>
-          <div class="item">
-            <b>Project 2: Admin Dashboard</b><br/>
-            <small>Created responsive UI with Bootstrap, filters/search, and role-based access.</small>
-          </div>
-          <div class="item">
-            <b>Project 3: Integration Module</b><br/>
-            <small>Integrated third-party services, handled retries/logging, and ensured data consistency.</small>
-          </div>
-        </div>
-        <p class="muted" style="margin:10px 0 0">
-          Replace these with your real project names + links (GitHub / live demo).
-        </p>
-      </div>
-
-      <div class="card" id="experience">
-        <h2>Experience</h2>
-        <div class="timeline">
-          <div class="item">
-            <b>Software Developer</b><br/>
-            <small>Company Name • 20XX – Present</small>
-            <ul class="list">
-              <li>Delivered features end-to-end (UI + API + DB).</li>
-              <li>Worked with teams to debug issues and ship stable releases.</li>
-              <li>Improved performance and reduced repeated manual tasks.</li>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Swati Beauty Parlour</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
-          </div>
-          <div class="item">
-            <b>Intern / Junior Developer</b><br/>
-            <small>Company Name • 20XX – 20XX</small>
-            <ul class="list">
-              <li>Supported bug fixes and enhancements.</li>
-              <li>Learned best practices for coding and collaboration.</li>
-            </ul>
-          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="grid" id="contact">
-      <div class="card">
-        <h2>Contact</h2>
-        <p class="muted" style="margin:0 0 10px">
-          Add your real contact information below:
-        </p>
-        <div class="timeline">
-          <div class="item"><b>Email:</b> <span class="muted">ruzalm@example.com</span></div>
-          <div class="item"><b>Phone:</b> <span class="muted">+1 (000) 000-0000</span></div>
-          <div class="item"><b>LinkedIn:</b> <span class="muted">linkedin.com/in/ruzalm</span></div>
-          <div class="item"><b>GitHub:</b> <span class="muted">github.com/ruzalm</span></div>
-        </div>
-      </div>
-
-      <div class="card">
-        <h2>Quick Message</h2>
-        <p class="muted" style="margin:0 0 10px">
-          (This is a simple frontend form. You can connect it to your backend later.)
-        </p>
-        <form onsubmit="event.preventDefault(); alert('Thanks! Your message is noted (demo).');">
-          <div style="display:grid; gap:10px">
-            <input required placeholder="Your Name" style="padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#0c1427;color:var(--text)"/>
-            <input required type="email" placeholder="Your Email" style="padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#0c1427;color:var(--text)"/>
-            <textarea required rows="4" placeholder="Your Message" style="padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#0c1427;color:var(--text)"></textarea>
-            <button class="btn primary" type="submit">Send Message</button>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <div class="footer">
-      © <span id="year"></span> Ruzal Majmudar • Built with HTML & CSS
     </div>
+</nav>
 
-  </div>
+<!-- Hero Section -->
+<section id="home" class="hero text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Welcome to Swati Beauty Parlour</h1>
+        <p class="lead">Enhancing Your Beauty with Care & Style</p>
+        <a href="#contact" class="btn btn-pink btn-lg btn-warning">Book Appointment</a>
+    </div>
+</section>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<!-- Services -->
+<section id="services" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Services</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card service-card text-center h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Bridal Makeup</h5>
+                        <p class="card-text">Professional bridal makeup for your special day.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card text-center h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Facial & Cleanup</h5>
+                        <p class="card-text">Glow-boosting facials and skin treatments.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card text-center h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Hair Styling</h5>
+                        <p class="card-text">Haircut, styling, smoothing & spa services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">About Us</h2>
+        <p class="text-center">
+            Swati Beauty Parlour is a trusted beauty destination in Kalol, Panchmahal.
+            We provide high-quality beauty services using premium products in a clean and friendly environment.
+        </p>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <p><strong>Address:</strong><br>
+                    Patel Faliya, Near Post Office,<br>
+                    Ta. Kalol, Dist. Panchmahal, Gujarat, India
+                </p>
+                <p><strong>Phone:</strong> +91 98765 43210</p>
+                <p><strong>Email:</strong> swatibeauty@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-3 text-center">
+    <div class="container">
+        <p class="mb-0">&copy; 2025 Swati Beauty Parlour. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
-
